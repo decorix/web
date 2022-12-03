@@ -1,55 +1,18 @@
-function Slideshow(element) {
-    this.el = document.querySelector(element);
-    this.init();
-}
+let offset = 0;
+const sliderLine = document.querySelector(".slider-line");
 
-Slideshow.prototype = {
-    init: function() {
-        this.wrapper = this.el.querySelector(".slider-wrapper");
-        this.slides = this.el.querySelectorAll(".slide");
-        this.previous = this.el.querySelector(".slider-previous");
-        this.next = this.el.querySelector(".slider-next");
-        this.index = 0;
-        this.total = this.slides.length;
+document.querySelector(".slider-next").addEventListener("click", function() {
+    offset += 487;
+    if (offset > 974) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + "px";
+});
 
-        this.actions();
-    },
-    _slideTo: function(pointer) {
-        var currentSlide = this.slides[pointer];
-        this.wrapper.style.left = "-" + currentSlide.offsetLeft + "px";
-    },
-    actions: function() {
-        var self = this;
-        self.next.addEventListener(
-            "click",
-            function() {
-                self.index++;
-                self.previous.style.display = "block";
-
-                if (self.index == self.total - 1) {
-                    self.index = self.total - 1;
-                    self.next.style.display = "none";
-                }
-
-                self._slideTo(self.index);
-            },
-            false
-        );
-
-        self.previous.addEventListener(
-            "click",
-            function() {
-                self.index--;
-                self.next.style.display = "block";
-
-                if (self.index == 0) {
-                    self.index = 0;
-                    self.previous.style.display = "none";
-                }
-
-                self._slideTo(self.index);
-            },
-            false
-        );
-    },
-};
+document.querySelector(".slider-prev").addEventListener("click", function() {
+    offset -= 487;
+    if (offset < 0) {
+        offset = 974;
+    }
+    sliderLine.style.left = -offset + "px";
+});

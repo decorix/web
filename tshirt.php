@@ -1,3 +1,17 @@
+<?php
+ $db = new PDO("mysql:host=std-1957.ist.mospolytech.ru;dbname=std_1957_web", "std", "28102017");
+ $info = [];
+ if($query = $db->query("SELECT * FROM tshirt")) {
+     $info = $query->fetchAll(PDO::FETCH_ASSOC);
+ } else {
+    print_r($db->errorInfo());
+}
+//  $connect = mysqli_connect('std-1957.ist.mospolytech.ru', 'std', '28102017', 'std_1957_web');
+//  if (!$connect) {
+//      echo 'eror';
+//  }
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 

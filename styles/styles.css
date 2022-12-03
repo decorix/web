@@ -58,6 +58,39 @@ header {
     width: 40%;
 }
 
+.slider {
+    margin: auto;
+    width: 487px;
+    height: 572px;
+    margin: 30 px auto;
+    overflow: hidden;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-left: 44%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+button,
+button:active,
+button:focus {
+    border: none;
+    background-color: rgb(24, 21, 16);
+    color: #fff;
+    border-radius: 1px;
+    width: 10%;
+}
+
+.slider-line {
+    height: 572px;
+    width: 1461px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
 
 /* Страница Каталог */
 
@@ -100,6 +133,10 @@ header {
     width: 60%;
     padding-left: 100px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.info-img {
+    margin-left: -100px;
 }
 
 
