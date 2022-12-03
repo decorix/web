@@ -10,107 +10,98 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index2.html">Каталог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index3.html">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index4.html">Вход/Регистрация</a
-                >
-              </li>
-            </ul>
-          </div>
+    <div class="page">
+
+        <header>
+            <div class="header_section">
+                <div class="headerlogo">RD</div>
+                <div class="header_item headerButton">
+                    <a href="index.html">Главная</a>
+                </div>
+                <div class="header_item headerButton">
+                    <a href="index2.html">Каталог</a>
+                </div>
+                <div class="header_item headerButton">
+                    <a href="index3.html">О нас</a>
+                </div>
+            </div>
+            <div class="header_section">
+                <div class="header_item headerButton">
+                    <a href="index4.html">Вход/Регистрация</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="window">
+            <div class="register_window">
+                <div class="register">
+                    <h1 class="text_register">Регистрация</h1>
+                    <div class="container">
+                        <form action="check.php" method="post">
+                            <div class="form-group">
+                                <label class="form-label" for="name">ФИО</label>
+                                <input class="input_fio" id="name" type="text" name="name" placeholder="Введите ФИО" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="input_email" id="email" type="email" name="email" placeholder="Введите email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="password">Password</label>
+                                <input id="password" type="password" name="password" placeholder="Введите пароль" required />
+                            </div>
+
+                            <input class="button_registr" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="authorization_window">
+                <div class="authorization">
+                    <h1 class="text_authorization">Авторизация</h1>
+                    <div class="container">
+                        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="input_email" id="email" type="email" name="email" placeholder="Введите email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="password">Password</label>
+                                <input id="password" type="password" name="password" placeholder="Введите пароль" required />
+                            </div>
+
+                            <input class="button_auth" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-    </header>
+        <footer>
+            <div class="information">
+                <div class="contacts">
+                    <p>Contacts: <br> +79212360692
+                        <br> polevg2015@yandex.ru
+                    </p>
+                </div>
+                <div class="social-network">
+                    <p>Social network:
+                        <ul class="network">
+                            <li><a class="vk-network" href="https://vk.com/jpull1" target="_blank">Vk</a></li>
+                            <li><a class="github-network" href="https://github.com/decorix" target="_blank">GitHub</a></li>
+                        </ul>
+                    </p>
+                </div>
 
-    <div class="register">
-      <h1>Регистрация</h1>
-      <div class="container">
-        <form action="check.php" method="post">
-          <div class="form-group">
-            <label class="form-label" for="name">ФИО</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Введите ФИО"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Введите email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Введите пароль"
-              required
-            />
-          </div>
-
-          <input type="submit" value="Отправить" />
-        </form>
-      </div>
+            </div>
+            <div class="copyright">
+                <p>(С) 2022 Поляков Е.А.</p>
+            </div>
     </div>
+    </footer>
+</body>
 
-    <div class="authorization">
-      <h1>Авторизация</h1>
-      <div class="container">
-        <form
-          action="https://httpbin.org/post"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Введите email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Введите пароль"
-              required
-            />
-          </div>
-
-          <input type="submit" value="Отправить" />
-        </form>
-      </div>
-    </div>
-
-    <!-- <footer class="footer-nav"></footer> -->
-  </body>
 </html>
