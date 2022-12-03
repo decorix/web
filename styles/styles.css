@@ -59,6 +59,30 @@ header {
 }
 
 
+/* Страница Каталог */
+
+.catalog {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    display: flex;
+    margin-top: 2%;
+}
+
+.tshirt {
+    text-align: center;
+    width: 33%;
+}
+
+.pants {
+    text-align: center;
+    width: 33%;
+}
+
+.cap {
+    text-align: center;
+    width: 33%;
+}
+
+
 /* Страница "О нас" */
 
 .information {
@@ -79,7 +103,7 @@ header {
 }
 
 
-/* Окно регистрации */
+/* Страница Входа/Регистрации*/
 
 .register_window {
     /* background-color: #689cd2; */
@@ -94,9 +118,8 @@ header {
     text-align: center;
 }
 
-.authorization_window {}
-
 .window {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     display: flex;
     margin-top: 7%;
     margin-left: 33%;
@@ -116,11 +139,11 @@ header {
 }
 
 .input_fio {
-    margin-left: 30px;
+    margin-left: 37px;
 }
 
 .input_email {
-    margin-left: 28px;
+    margin-left: 31px;
 }
 
 .page {
